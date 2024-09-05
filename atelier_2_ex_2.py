@@ -17,7 +17,6 @@ def position_while(lst:list,elt:int)->int:
     while i !=len(lst) and e_liste != elt : 
         if lst[i]==elt:
             res=i
-            return(res)
         i=i+1
     if elt not in lst :
         res=-1
