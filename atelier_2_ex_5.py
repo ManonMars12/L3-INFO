@@ -15,7 +15,7 @@ def nb_occurrences(lst:list,e:int)->int:
 
 
      
-def exo_5(lst:list, nb_emplacements:int)->list: 
+def vitrine(lst:list, nb_emplacements:int)->list: 
     lst_db_occ=doublon(lst)
     vitrine_1=[]
     vitrine_2=[]
