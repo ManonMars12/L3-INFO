@@ -62,3 +62,41 @@ def dictionnaire(fichier:str)->list:
     return(liste_res)
     
     
+def test()->None: 
+    lst_mots=[]
+    n=int(input("Veuillez entrer un nombre de lettres"))
+    for i in range(0,4):
+        un_mot=str(input("Veuillez entrer un mot"))
+        lst_mots.append(un_mot)  
+    mots_Nlettres(lst_mots,n)
+    
+    prefixe=str(input("Veuillez entrer un préfixe"))
+    mot=str(input("Veuillez entrer un mot"))
+    commence_par(prefixe, mot)
+    
+    mot=str(input("Veuillez entrer un mot"))
+    suffixe=str(input("Veuillez entrer un suffixe"))
+    finit_par(suffixe, mot)
+    
+    suffixe=str(input("Veuillez entrer un suffixe"))
+    for i in range(0,4):
+        un_mot=str(input("Veuillez entrer un mot"))
+        lst_mots.append(un_mot)
+    finissent_par(suffixe, lst_mots)
+    
+    prefixe=str(input("Veuillez entrer un préfixe"))
+    for i in range(0,4):
+        un_mot=str(input("Veuillez entrer un mot"))
+        lst_mots.append(un_mot)
+    commencent_par(prefixe, lst_mots)
+    
+    prefixe=str(input("Veuillez entrer un préfixe"))
+    suffixe=str(input("Veuillez entrer un suffixe"))
+    n=int(input("Veuillez entrer un nombre de lettres"))
+    for i in range(0,4):
+        un_mot=str(input("Veuillez entrer un mot"))
+        lst_mots.append(un_mot)  
+    liste_mots(lst_mots,prefixe, suffixe, n)
+    
+    dictionnaire("mots.txt")
+
