@@ -89,26 +89,18 @@ def validite_domaine_mail(str_arg:str)->(int,int):
     
 def test_is_mail(str_arg:str)->str:
     if is_mail(str_arg)==((0,2)):
-        print("Votre mail n'est pas valide, il doit contenir une @")
+        return("Votre mail n'est pas valide, il doit contenir une @")
     elif is_mail(str_arg)==((0,1)):
-        print("Votre mail n'est pas valide, le corps n'est pas valide")
+        return("Votre mail n'est pas valide, le corps n'est pas valide")
     elif is_mail(str_arg)==((0,3)):
-        print("Votre mail n'est pas valide, le domaine n'est pas valide")
+        return("Votre mail n'est pas valide, le domaine n'est pas valide")
     elif is_mail(str_arg)==((0,4)):
-        print("Votre mail n'est pas valide, il manque le . ")
+        return("Votre mail n'est pas valide, il manque le . ")
     else : 
-        print("Votre mail est valide")
+        return("Votre mail est valide")
 
-
-
-
-    
-    
-    
-    
-
-    
-    
-    
-   
-    
+print(test_is_mail("mmars2ajaccio@gmail.com"))
+print(test_is_mail("mmars2ajaccio#gmail.com"))
+print(test_is_mail("mmars2ajaccio@gmailPOINTcom"))
+print(test_is_mail("mmar+++s2ajaccio@gmail.com"))
+print(test_is_mail("mmars2ajaccio@gmai++++l.com"))
