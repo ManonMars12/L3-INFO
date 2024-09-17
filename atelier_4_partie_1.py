@@ -52,7 +52,7 @@ def longueur(lst:list)->int:
         return(0)
     else : 
         lst_rec=lst[1:]
-        return(1+longueur(lst_rec)
+        return(1+longueur(lst_rec))
 
 def minimum(lst:list)->float:
     
