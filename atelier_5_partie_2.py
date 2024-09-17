@@ -9,6 +9,18 @@ import numpy as np
 
 
 def tri(lst:list)->list:
+    
+    """
+    Trie une liste en utilisant l'algorithme de tri par sélection qui sélectionne le plus petit élément de la liste
+    à chaque itération et le place dans une nouvelle liste.
+
+    Args:
+        lst (list): Liste d'éléments à trier.
+
+    Returns:
+        list: Nouvelle liste contenant les éléments triés.
+    """
+    
     res=[]
     for i in range(len(lst)):
         res.append(min(lst))
@@ -20,6 +32,19 @@ def tri(lst:list)->list:
 
 
 def gen_list_random_int(int_nb=10, int_binf=0, int_bsup=10):
+    
+    """
+   Génère une liste de nombres entiers aléatoires dans une plage donnée.
+
+   Args:
+       int_nb (int): Nombre d'entiers dans la liste. Par défaut 10.
+       int_binf (int): Borne inférieure des entiers générés. Par défaut 0.
+       int_bsup (int): Borne supérieure des entiers générés. Par défaut 10.
+
+   Returns:
+       list: Liste d'entiers aléatoires générés.
+   """
+   
     liste=[]
     for i in range(int_nb):
         liste.append(rd.randint(int_binf,int_bsup))
@@ -28,6 +53,20 @@ def gen_list_random_int(int_nb=10, int_binf=0, int_bsup=10):
 
 
 def perf_mix2(fonction1:callable, fonction2:callable, lst_taille:list,nb_exec:int)->tuple: 
+    
+    """
+    Compare les performances de deux fonctions sur des listes de différentes tailles, en mesurant le temps d'exécution moyen.
+
+    Args:
+        fonction1 (callable): Première fonction à tester (par exemple `sorted`).
+        fonction2 (callable): Deuxième fonction à tester (par exemple `tri`).
+        lst_taille (list): Liste des tailles des listes sur lesquelles tester les fonctions.
+        nb_exec (int): Nombre d'exécutions pour chaque taille de liste afin d'obtenir une moyenne.
+
+    Returns:
+        tuple: Deux listes contenant les temps d'exécution moyens pour `fonction1` et `fonction2` pour chaque taille de liste.
+    """
+    
     perf_f1=[]
     perf_f2=[]
     moy=0
@@ -62,6 +101,16 @@ def perf_mix2(fonction1:callable, fonction2:callable, lst_taille:list,nb_exec:in
     return(perf_f1, perf_f2)
     
 def plot_q3()->None:
+    
+    """
+    Trace un graphique comparant les performances entre les fonctions `sorted` et `tri` pour des tailles de listes variées.
+
+    Le graphique montre le temps d'exécution en fonction de la taille de la liste pour chaque fonction testée.
+
+    Returns:
+        None: Cette fonction n'a pas de valeur de retour.
+    """
+    
     lst_taille = [10, 500, 5000, 50000, 100000]
     x_axis_list = np.array(lst_taille)
 
@@ -85,5 +134,7 @@ def plot_q3()->None:
 
     # Affichage du graphique
     plt.show()
+
+    
 
     
