@@ -60,7 +60,7 @@ def extract_elements_list(list_in_which_to_choose:list, int_nbr_of_element_to_ex
 
     
 
-def perf_mix(fonction1:callable, fonction2:callable, lst_taille:list,nb_exec:int): 
+def perf_mix(fonction1:callable, fonction2:callable, lst_taille:list,nb_exec:int)->tuple: 
     perf_f1=[]
     perf_f2=[]
     moy=0
@@ -86,7 +86,7 @@ def perf_mix(fonction1:callable, fonction2:callable, lst_taille:list,nb_exec:int
         
     return(perf_f1, perf_f2)
 
-def plot_q1():
+def plot_q1()->None:
     # Les tailles de listes à utiliser pour les tests
     lst_taille = [10, 500, 5000, 50000, 100000]
     x_axis_list = np.array(lst_taille)
@@ -110,7 +110,7 @@ def plot_q1():
     plt.show()
     
     
-def perf_mix2(fonction1:callable, fonction2:callable, lst_taille:list,nb_exec:int): 
+def perf_mix2(fonction1:callable, fonction2:callable, lst_taille:list,nb_exec:int)->tuple: 
     perf_f1=[]
     perf_f2=[]
     moy=0
@@ -137,7 +137,7 @@ def perf_mix2(fonction1:callable, fonction2:callable, lst_taille:list,nb_exec:in
             
     return(perf_f1, perf_f2)
     
-def plot_q2():
+def plot_q2()->None:
     lst_taille = [10, 500, 5000, 50000, 100000]
     x_axis_list = np.array(lst_taille)
 
@@ -161,9 +161,3 @@ def plot_q2():
 
     # Affichage du graphique
     plt.show()
-    
-
-    
-
-
-
