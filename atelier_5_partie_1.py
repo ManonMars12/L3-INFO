@@ -116,7 +116,7 @@ def perf_mix2(fonction1:callable, fonction2:callable, lst_taille:list,nb_exec:in
     moy=0
     nb_hasard=rd.randint(0, 9)
     for i in range(len(lst_taille)):
-        lst_hasard=gen_list_random_int(lst_taille[i], int_binf=0, int_bsup=10)
+        lst_hasard=gen_list_random_int(lst_taille[i], int_binf=0, int_bsup=10) #Juste à changer selon configuration 
         for i in range(nb_exec):
             start_pc = time.perf_counter()
             fonction1(lst_hasard, lst_hasard[nb_hasard])
